@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+"""
+start Flask application
+"""
+
+from flask import Flask
+app = Flask(__name__)
+app.url_map.strict_slashes = false
+
+
+@app.route('/')
+def index():
+    """returns Hello HBNB!"""
+    return 'Hello HBNB!'
+
+
+@app.route('/hbnb')
+def hbnb():
+    """returns HBNB"""
+    return 'HBNB'
+
+@app.route('/c/<text>')
+def c_with_prams(text):
+    """returns c with params """
+
+    text_no_underscore = text.replace('_' ' ')
+    return "c {}".format(text_no_underscore)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port='5000')

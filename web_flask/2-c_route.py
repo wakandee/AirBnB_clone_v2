@@ -23,7 +23,7 @@ def hbnb():
 def c_with_prams(text):
     """returns c with params """
 
-    text_no_underscore = text.replace('_' ' ')
+    text_no_underscore = text.replace('_', ' ')
     return "c {}".format(text_no_underscore)
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ start Flask application
 
 from flask import Flask
 app = Flask(__name__)
-app.url_map.strict_slashes = false
+app.url_map.strict_slashes = False
 
 
 @app.route('/')
